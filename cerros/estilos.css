@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(245, 210, 158);
+    color: brown;
+    font-size: 16 px;
+    font-family: calibri;
+    margin: 0;/*para que los elementos se ajusten completamente al navegador*/
+}
+#cabecera{
+    background-color: rgb(144, 31, 31);
+   
+}
+
+#cabecera h1{
+    color: yellow;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+nav{
+    background-color: rgb(212, 72, 72);
+    margin: 0;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+/*Ponemos el padding a 0 para poder manipular mejor la ubicación, pq cada navegador trae una x defecto.
+Se pone 'text-align-center' para no tener inconvenientes a la hora de acomodar los objetos*/
+
+nav ul li {
+    display: inline;
+
+}
+/*Accedemos al nivel 'nav - ul - li' para manipular los elementos de la lista.
+El 'inline' es para que queden de maner horizontal*/
+
+nav ul li a{
+    font-size: 28px;
+    text-decoration: none;
+    color: orange;
+    padding: 8px 10px;
+    display: inline-block;
+}
+/*'padding' es para darle un espaciado interno a los elemntos del emnú de navegación.
+    'display: inline-block' es para poder manipular cada elemento x separado y que funcionen de manera individual*/
+
+    nav ul li a:hover{
+        background-color: brown;
+        color: yellow;       
+        
+    }
+
+    #cont-img{
+        background-image: url(img/paisaje3.png);
+        height: 450px;
+        background-position: center;
+        margin-bottom: 30px;
+    }
+
+    /*'background-position: center;' ubica la img en el centro*/
+
+    #cont-img .imagen h1{
+        color: rgb(211, 26, 26);
+        text-align: center;
+        font-size: 40px;
+        padding-top: 25px;
+        margin: 0px;
+    }
+
+    .contenedor{
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    /*' overflow: hidden' regulariza la parte visible del contenido*/
+
+    #cont-principal{
+        float: left;
+        width: 70%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        background: rgb(240, 240, 175);
+        height: 680px;
+    }
+
+    #lateral{
+        float: right;
+        width: 30%;
+        background-color: rgb(252, 252, 99);
+        padding: 10px;
+        box-sizing: border-box;
+        height: 680px;  
+        margin-bottom: 30px;  
+        
+    }
+
+    #lateral h3{
+        text-align: center;
+    }
+
+    /*Una vez que ambos elementos están flotandos, hay que controlar el 'width' para ubicarlos.
+    'box-sizing: border-box' es para que mantengan las dimensiones de caja, para controlar sus bordes*/
+
+    #pie{
+        background-color: rgb(38, 3, 3);
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+    @media(max-width:650px){
+
+        #cont-principal{
+            width: 100%;
+            float: none;
+            
+        }
+
+        #lateral{
+            width: 100%;
+            float: none;
+        }
+            
+
+    }
+
+    /*'@media(max-width)' es para limitar el ancho del monitor, para que los elementos se acomoden a la vista. Es decir, para adaptarlo a diferentes dispositivos.
+    . Que cuado cumpla esa propiedad de los 650px, el ancho de cada uno (#cont-principal y #lateral)ocupe el 100% del contenedor.
+    Para que lo anterior funcione, hay que quitarle la prop. 'float'*/
